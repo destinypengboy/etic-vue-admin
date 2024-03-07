@@ -38,6 +38,9 @@ public class SysJob extends BaseEntity
     @Excel(name = "调用目标字符串")
     private String invokeTarget;
 
+    @Excel(name = "请求体")
+    private String requestBody;
+
     /** cron执行表达式 */
     @Excel(name = "执行表达式 ")
     private String cronExpression;
@@ -148,6 +151,14 @@ public class SysJob extends BaseEntity
     public void setStatus(String status)
     {
         this.status = status;
+    }
+
+    public String getRequestBody() {
+        return requestBody;
+    }
+
+    public void setRequestBody(String requestBody) {
+        this.requestBody = requestBody;
     }
 
     @Override
